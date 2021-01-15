@@ -2,6 +2,8 @@
 #define COMMON_H
 #include <time.h>
 
+int * newArray(int size);
+
 void mostrarItens(int * array, int tam); 
 
 void mostrarRange(int * array, int inicio, int fim); 

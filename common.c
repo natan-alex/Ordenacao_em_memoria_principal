@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+int * newArray(int size) {
+	return (int *) malloc(sizeof(int) * size);
+}
+
 void mostrarItens(int * array, int tam) {
     printf("[");
     for (int i = 0; i < tam; i++)

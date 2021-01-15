@@ -1,10 +1,11 @@
 #include "countingsort.h"
 #include "common.h"
+#include "stdlib.h"
 
 void countingsort(int * array, int tam) {
-	int ordenado[tam]; // array com valores ordenados
+	int * ordenado = (int*)newArray(tam); // array com valores ordenados
 	int maior = getMaior(array, tam);
-	int contagem[maior + 1]; // array de contagem
+	int * contagem = (int*)newArray(maior + 1); // array de contagem
 
 	// inicializar valores do array contagem com 0
 	for (int i = 0; i <= maior; i++)
@@ -29,4 +30,7 @@ void countingsort(int * array, int tam) {
 	// copiar valores ordenados para array original
 	for (int i = 0; i < tam;  i++)
 		array[i] = ordenado[i];
+
+	free(ordenado);
+	free(contagem);
 }
