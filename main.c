@@ -14,7 +14,7 @@
 
 int main(int argc, char ** argv) {
 	int tam, opcao, * array;
-	clock_t inicio, fim; 
+	clock_t comeco, fim;
 
 	do {
 		printf("\n");
@@ -34,7 +34,7 @@ int main(int argc, char ** argv) {
 		printf("  [0] - sair\n");
 		printf("  Opção: ");
 		scanf("%d", &opcao);
-		inicio = clock();
+		comeco = clock();
 		switch(opcao) {
 			case 1:
 				countingsort(array, tam);
@@ -68,7 +68,7 @@ int main(int argc, char ** argv) {
 			fim = clock();
 			printf("Array ordenado: \n");
 			mostrarItens(array, tam);
-			printaTempoOrdenacao(inicio, fim);
+			printaTempoOrdenacao(comeco, fim);
 		}
 		free(array);
 	} while (opcao != 0);
