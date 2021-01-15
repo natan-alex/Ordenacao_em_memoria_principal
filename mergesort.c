@@ -1,8 +1,10 @@
 #include "mergesort.h"
+#include "stdlib.h"
+#include "common.h"
 
 void intercalar(int * array, int esq, int meio, int dir) {
     // array para intercalação
-    int tmp[dir - esq + 1];
+    int * tmp = newArray(dir - esq + 1);
 
     int i = esq, j = meio+1;
     int controle = 0; // inserções no array tmp
@@ -21,8 +23,11 @@ void intercalar(int * array, int esq, int meio, int dir) {
 
     // copiar para o array original
     i = esq;
-    for (int k = 0; k < controle; k++)
+    for (int k = 0; k < controle; k++) {
         array[i++] = tmp[k];
+	}
+
+	free(tmp);
 }
 
 void mergesort(int * array, int esq, int dir) {
