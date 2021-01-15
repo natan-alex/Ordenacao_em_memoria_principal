@@ -6,7 +6,7 @@ void quicksort(int * array, int esq, int dir) {
     int i = esq, j = dir;
 
     while (i <= j) {
-        while (array[i] <= pivo)
+        while (array[i] < pivo)
             i++;
         while (array[j] > pivo)
             j--;
