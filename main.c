@@ -21,9 +21,10 @@ int main(int argc, char ** argv) {
 		printf("Tamanho do array a ser ordenado: ");
 		scanf("%d", &tam);
 		array = gerarArrayAleatorio(tam);
-		printf("Array gerado: \n");
+		printf("Array gerado aleatoriamente: \n");
 		mostrarItens(array, tam);
 		printf("\t\tMENU\t\t\n");
+		printf(" Escolha dentre um dos algoritmos abaixo para ordenar o array: \n");
 		printf("  [1] - Countingsort\n");
 		printf("  [2] - Heapsort\n");
 		printf("  [3] - Insertionsort\n");
