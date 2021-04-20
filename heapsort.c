@@ -36,7 +36,7 @@ void heapsort(int * array, int tam) {
     // maior elemento, com o 
     // ultimo elemento do array 
     // a ser ordenado, que diminui
-    // de tamanho a cada troca
+    // de tamanho a cada troca,
     // e reconstruir o heap
     for (int i = tam-1; i > 0; i--) {
         swap(array, 0, i);
