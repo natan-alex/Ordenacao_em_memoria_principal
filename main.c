@@ -7,6 +7,7 @@
 #include "countingsort.h"
 #include "heapsort.h"
 #include "insertionsort.h"
+#include "insertion_with_bsearch.h"
 #include "mergesort.h"
 #include "quicksort.h"
 #include "selectionsort.h"
@@ -25,14 +26,15 @@ int main(int argc, char ** argv) {
 		mostrarItens(array, tam);
 		printf("\t\tMENU\t\t\n");
 		printf(" Escolha dentre um dos algoritmos abaixo para ordenar o array: \n");
+		printf("  [0] - sair\n");
 		printf("  [1] - Countingsort\n");
 		printf("  [2] - Heapsort\n");
 		printf("  [3] - Insertionsort\n");
-		printf("  [4] - Mergesort\n");
-		printf("  [5] - Quicksort\n");
-		printf("  [6] - Selectionsort\n");
-		printf("  [7] - Shellsort\n");
-		printf("  [0] - sair\n");
+		printf("  [4] - Insertionsort com pesquisa binaria\n");
+		printf("  [5] - Mergesort\n");
+		printf("  [6] - Quicksort\n");
+		printf("  [7] - Selectionsort\n");
+		printf("  [8] - Shellsort\n");
 		printf("  Opção: ");
 		scanf("%d", &opcao);
 		comeco = clock();
@@ -46,16 +48,19 @@ int main(int argc, char ** argv) {
 			case 3:
 				insertionsort(array, tam);
 				break;
-			case 4:
+            case 4:
+                insertion_sort_with_bsearch(array, tam);
+                break;
+			case 5:
 				mergesort(array, 0, tam-1);
 				break;
-			case 5:
+			case 6:
 				quicksort(array, 0, tam-1);
 				break;
-			case 6:
+			case 7:
 				selectionsort(array, tam);
 				break;
-			case 7:
+			case 8:
 				shellsort(array, tam);
 				break;
 			case 0:
