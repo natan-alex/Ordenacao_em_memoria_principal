@@ -49,7 +49,7 @@ int * gerarArrayAleatorio(int tam) {
 }
 
 void printaTempoOrdenacao(clock_t comeco, clock_t fim) {
-	double tempoSeg = (fim - comeco) / CLOCKS_PER_SEC;
+	double tempoSeg = (fim - comeco) / (double) CLOCKS_PER_SEC;
 	if (tempoSeg < 1) {
 		tempoSeg *= 1000;
 		printf("Tempo para ordenar o array: %lf ms.\n", tempoSeg);
