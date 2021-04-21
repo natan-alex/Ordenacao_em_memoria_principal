@@ -3,9 +3,9 @@
 #include "stdlib.h"
 
 void countingsort(int * array, int tam) {
-	int * ordenado = (int*)newArray(tam); // array com valores ordenados
+	int * ordenado = (int*)newIntArray(tam); // array com valores ordenados
 	int maior = getMaior(array, tam);
-	int * contagem = (int*)newArray(maior + 1); // array de contagem
+	int * contagem = (int*)newIntArray(maior + 1); // array de contagem
 
 	// inicializar valores do array contagem com 0
 	for (int i = 0; i <= maior; i++)

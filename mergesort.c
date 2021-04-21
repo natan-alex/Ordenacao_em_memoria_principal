@@ -4,7 +4,7 @@
 
 void intercalar(int * array, int esq, int meio, int dir) {
     // array para intercalação
-    int * tmp = newArray(dir - esq + 1);
+    int * tmp = newIntArray(dir - esq + 1);
 
     int i = esq, j = meio+1;
     int controle = 0; // inserções no array tmp
