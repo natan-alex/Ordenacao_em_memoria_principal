@@ -2,7 +2,7 @@
 #define COMMON_H
 #include <time.h>
 
-int * newArray(int size);
+int * newIntArray(int size);
 
 void mostrarItens(int * array, int tam); 
 
